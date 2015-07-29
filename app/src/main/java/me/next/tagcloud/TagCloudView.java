@@ -38,7 +38,6 @@ public class TagCloudView extends ViewGroup{
 
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
-//        Log.d(TAG, "Child Count : " + getChildCount());
         /*
         int childWidth;
         int childHeight;
@@ -89,8 +88,6 @@ public class TagCloudView extends ViewGroup{
         int heightMode = MeasureSpec.getMode(heightMeasureSpec);
         sizeWidth = MeasureSpec.getSize(widthMeasureSpec);
         sizeHeight = MeasureSpec.getSize(heightMeasureSpec);
-//        Log.d(TAG, "getDefaultSize : "+getDefaultSize(0, widthMeasureSpec));
-//        Log.d(TAG, "widthMode : "+sizeWidth);
 
         //计算 childView 宽高
         measureChildren(widthMeasureSpec, heightMeasureSpec);
