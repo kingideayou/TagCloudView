@@ -5,7 +5,7 @@
     android:background="#ffffff"
     tools:context=".MainActivity">
 
-    <me.next.tagcloud.TagCloudView
+    <me.next.tagview.TagCloudView
         android:id="@+id/tag_cloud_view"
         android:background="#000000"
         android:layout_width="match_parent"

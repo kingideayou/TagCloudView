@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="TagCloudView">
+
+        <attr name="tcvBorder" format="dimension"/>
+        <attr name="tcvBorderItem" format="dimension"/>
+        <attr name="tcvBackground" format="reference"/>
+        <attr name="tcvTextColor" format="color"/>
+
+    </declare-styleable>
+
+</resources>
