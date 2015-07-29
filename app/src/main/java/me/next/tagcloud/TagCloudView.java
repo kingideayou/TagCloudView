@@ -2,6 +2,7 @@ package me.next.tagcloud;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -105,24 +106,29 @@ public class TagCloudView extends ViewGroup{
 
             totalWidth += childWidth + marginLeft;
 
+            if (i == 0) {
+                totalHeight = childHeight + marginTop;
+            }
+
             // + marginLeft 保证最右侧与 ViewGroup 右边距有边界
             if (totalWidth + marginLeft > sizeWidth) {
                 totalWidth = 0;
                 totalHeight += childHeight + marginTop;
                 child.layout(
                         totalWidth + marginLeft,
-                        totalHeight,
+                        totalHeight - childHeight,
                         totalWidth + childWidth + marginLeft,
-                        totalHeight + childHeight);
+                        totalHeight);
                 totalWidth += childWidth;
             } else {
                 child.layout(
                         totalWidth - childWidth + marginLeft,
-                        totalHeight,
+                        totalHeight - childHeight,
                         totalWidth + marginLeft,
-                        totalHeight + childHeight);
+                        totalHeight);
             }
         }
+        totalHeight += marginTop;
 
         /**
          * 高度根据设置改变
