@@ -33,12 +33,24 @@ public class TagCloudView extends ViewGroup{
     private int mTagBorderHor;
     private int mTagBorderVer;
 
+    private int mRightImageResId;
+    private boolean mSingleLine;
+    private boolean mShowRightImage;
+    private boolean mShowEndText;
+    private String endTextString;
+
     private static final int DEFAULT_TEXT_COLOR = Color.WHITE;
     private static final int DEFAULT_TEXT_SIZE = 14;
     private static final int DEFAULT_TEXT_BACKGROUND = R.drawable.tag_background;
     private static final int DEFAULT_VIEW_BORDER = 6;
     private static final int DEFAULT_TEXT_BORDER_HORIZONTAL = 5;
     private static final int DEFAULT_TEXT_BORDER_VERTICAL = 5;
+
+    private static final int DEFAULT_RIGHT_IMAGE = R.drawable.arrow_right;
+    private static final boolean DEFAULT_SINGLE_LINE = false;
+    private static final boolean DEFAULT_SHOW_RIGHT_IMAGE = false;
+    private static final boolean DEFAULT_SHOW_END_TEXT = false;
+    private static final String DEFAULT_END_TEXT_STRING = "...";
 
     public TagCloudView(Context context) {
         this(context, null);
@@ -69,6 +81,12 @@ public class TagCloudView extends ViewGroup{
         mTagBorderVer = a.getDimensionPixelSize(
                 R.styleable.TagCloudView_tcvItemBorderVertical, DEFAULT_TEXT_BORDER_VERTICAL);
 
+        mRightImageResId = a.getResourceId(R.styleable.TagCloudView_tcvRightResId, DEFAULT_RIGHT_IMAGE);
+        mSingleLine = a.getBoolean(R.styleable.TagCloudView_tcvSingleLine, DEFAULT_SINGLE_LINE);
+        mShowRightImage = a.getBoolean(R.styleable.TagCloudView_tcvShowRightImg, DEFAULT_SHOW_RIGHT_IMAGE);
+        mShowEndText = a.getBoolean(R.styleable.TagCloudView_tcvShowEndText, DEFAULT_SHOW_END_TEXT);
+        endTextString = a.getString(R.styleable.TagCloudView_tcvEndText, DEFAULT_END_TEXT_STRING);
+
         a.recycle();
     }
 
@@ -96,8 +114,6 @@ public class TagCloudView extends ViewGroup{
 
         int childWidth;
         int childHeight;
-//        int marginLeft = 5;
-//        int marginTop = 8;
         int totalWidth = 0;
         int totalHeight = mTagBorderVer;
         for (int i = 0; i < getChildCount(); i++) {
@@ -138,6 +154,10 @@ public class TagCloudView extends ViewGroup{
                 sizeWidth,
                 (heightMode == MeasureSpec.EXACTLY ? sizeHeight : totalHeight));
 
+    }
+
+    private void singleLineStyle() {
+        //ImageView imageView = new ImageView(getContext());
     }
 
     @Override

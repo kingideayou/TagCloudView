@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/TagCloudView.iml" filepath="$PROJECT_DIR$/TagCloudView.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/tagview/tagview.iml" filepath="$PROJECT_DIR$/tagview/tagview.iml" />
     </modules>
   </component>
 </project>
