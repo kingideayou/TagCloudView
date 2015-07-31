@@ -10,6 +10,12 @@
         <attr name="tcvTextColor" format="color"/>
         <attr name="tcvTextSize" format="dimension"/>
 
+        <attr name="tcvSingleLine" format="boolean"/>
+        <attr name="tcvShowRightImg" format="boolean"/>
+        <attr name="tcvRightResId" format="reference"/>
+        <attr name="tcvShowEndText" format="boolean"/>
+        <attr name="tcvEndText" format="string"/>
+
     </declare-styleable>
 
 </resources>

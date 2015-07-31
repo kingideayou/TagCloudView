@@ -11,9 +11,11 @@
         android:background="#000000"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:tcvItemBorderHorizontal="6dp"
+        app:tcvItemBorderHorizontal="8dp"
         app:tcvItemBorderVertical="6dp"
-        app:tcvBorder="10dp"
-        app:tcvTextColor="#123455"/>
+        app:tcvBorder="8dp"
+        app:tcvTextColor="#123455"
+        app:tcvSingleLine="true"
+        />
 
 </RelativeLayout>

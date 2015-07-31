@@ -6,8 +6,8 @@
           android:layout_height="wrap_content"
           android:paddingTop="2dp"
           android:paddingBottom="2dp"
-          android:paddingLeft="6dp"
-          android:paddingRight="6dp"
+          android:paddingLeft="8dp"
+          android:paddingRight="8dp"
           tools:text="哈哈哈"
           android:textColor="#FFFFFF"
           android:background="@drawable/tag_background"/>
