@@ -280,7 +280,7 @@ public class TagCloudView extends ViewGroup{
                 totalHeight = childHeight + mViewBorder;
             }
             // + marginLeft 保证最右侧与 ViewGroup 右边距有边界
-            if (totalWidth + mTagBorderHor > sizeWidth) {
+            if (totalWidth + mTagBorderHor + mViewBorder> sizeWidth) {
                 totalWidth = mViewBorder;
                 totalHeight += childHeight + mTagBorderVer;
                 child.layout(
