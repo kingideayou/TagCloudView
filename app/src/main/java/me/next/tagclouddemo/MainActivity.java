@@ -99,6 +99,17 @@ public class MainActivity extends AppCompatActivity implements TagCloudView.OnTa
             }
         });
 
+        TagCloudView tagCloudView8 = (TagCloudView) findViewById(R.id.tag_cloud_view_8);
+        tagCloudView8.setTags(tags);
+        tagCloudView8.setOnTagClickListener(this);
+        tagCloudView8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(), "TagView onClick",
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 
 

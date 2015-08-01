@@ -156,5 +156,26 @@
             app:tcvCanTagClick="true"
             />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:background="#009688"
+            android:textColor="#ffffff"
+            android:text="修改样式的标签云效果"/>
+        <me.next.tagview.TagCloudView
+            android:id="@+id/tag_cloud_view_8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_tagcloudview_light_selector"
+            app:tcvItemBorderHorizontal="8dp"
+            app:tcvItemBorderVertical="6dp"
+            app:tcvBorder="8dp"
+            app:tcvBackground="@drawable/background_tag_selector"
+            app:tcvTextColor="#42A5F5"
+            app:tcvSingleLine="false"
+            app:tcvCanTagClick="false"
+            />
+
     </LinearLayout>
 </ScrollView>
