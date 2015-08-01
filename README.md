@@ -15,8 +15,9 @@
 
 # 效果图
 
-<img src="https://raw.githubusercontent.com/kingideayou/TagCloudView/master/imgs/tagCloudView_1.png" width = "380" height = "620" alt="TagCloudView" align=center />
+<img src="https://raw.githubusercontent.com/kingideayou/TagCloudView/master/imgs/tagCloudView_1.png" width = "320" height = "580" alt="TagCloudView" align=center />
+<img src="https://raw.githubusercontent.com/kingideayou/TagCloudView/master/imgs/tagCloudView_2.png" width = "320" height = "580" alt="TagCloudView" align=center />
 
-<img src="https://raw.githubusercontent.com/kingideayou/TagCloudView/master/imgs/tagCloudView_2.png" width = "380" height = "620" alt="TagCloudView" align=center />
+动图展示:
 
 <img src="https://raw.githubusercontent.com/kingideayou/TagCloudView/master/imgs/tagCloudView_3.gif" width = "380" height = "620" alt="TagCloudView" align=center />
