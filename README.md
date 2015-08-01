@@ -11,6 +11,50 @@
 然后在我们需要依赖这个模块的module中的build.gradle文件中加入如下代码:
     
       compile project(':tagview')
+      
+只需要在 XML 文件中添加如下视图
+
+      <me.next.tagview.TagCloudView
+            android:id="@+id/tag_cloud_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_tagcloudview_black_selector"
+            app:tcvItemBorderHorizontal="8dp"
+            app:tcvItemBorderVertical="6dp"
+            app:tcvBorder="8dp"
+            app:tcvTextColor="#123455"
+            app:tcvSingleLine="true"
+            app:tcvCanTagClick="true"
+            />
+
+在 Activity 中调用如下方法即可
+
+      List<String> tags = new ArrayList<>();
+        for (int i = 0; i < 20; i++) {
+            tags.add("标签" + i);
+        }
+        
+      TagCloudView tagCloudView1 = (TagCloudView) findViewById(R.id.tag_cloud_view_1);
+      tagCloudView1.setTags(tags);
+      tagCloudView1.setOnTagClickListener(this);
+      tagCloudView1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(), "TagView onClick",
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+        
+       @Override
+      public void onTagClick(int position) {
+        if (position == -1) {
+            Toast.makeText(getApplicationContext(), "点击末尾文字",
+                    Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(getApplicationContext(), "点击 position : " + position,
+                    Toast.LENGTH_SHORT).show();
+        }
+      }
 
 # 效果图
 
