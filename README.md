@@ -14,6 +14,8 @@
       
 只需要在 XML 文件中添加如下视图
 
+      app:tcvSingleLine="true" true 为 SingleLine 模式，false 为默认标签云模式
+
       <me.next.tagview.TagCloudView
             android:id="@+id/tag_cloud_view"
             android:layout_width="match_parent"
