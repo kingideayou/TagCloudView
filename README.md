@@ -3,6 +3,8 @@
 
 标签云效果，可以设置为 SingleLine 模式，丰富的自定义样式选择 [Demo apk 下载](https://github.com/kingideayou/TagCloudView/raw/master/apk/Demo.apk)。
 
+只需要一行代码即可设置 SingleLine 模式：app:tcvSingleLine="true" true 为 SingleLine 模式，false 为默认标签云模式
+
 # How to user 如何使用
 首先下载 tagView，将 tagView 文件夹拷贝到项目的目录下面，然后在setting.gradle文件中增加文件夹名称
 
@@ -13,8 +15,6 @@
       compile project(':tagview')
       
 只需要在 XML 文件中添加如下视图
-
-      app:tcvSingleLine="true" true 为 SingleLine 模式，false 为默认标签云模式
 
       <me.next.tagview.TagCloudView
             android:id="@+id/tag_cloud_view"
