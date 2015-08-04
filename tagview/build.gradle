@@ -35,7 +35,7 @@ bintray {
     configurations = ['archives']
     pkg {
         repo = "maven"
-        name = "TagCloudView"
+        name = "tag-cloud-view"
         websiteUrl = siteUrl
         vcsUrl = gitUrl
         licenses = ["Apache-2.0"]
@@ -49,6 +49,7 @@ install {
         pom {
             project {
                 packaging 'aar'
+                artifactId 'tag-cloud-view'
 
                 // Add your description here
                 name 'A tag cloud which support singleline mode on Android'
@@ -65,7 +66,7 @@ install {
                     developer {
                         id 'kingideayou'
                         name 'kingideayou'
-                        email 'kingideayou@foxmail.com'
+                        email 'kingideayou@qq.com'
                     }
                 }
                 scm {
