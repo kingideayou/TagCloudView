@@ -18,11 +18,23 @@ public class MainActivity extends AppCompatActivity implements TagCloudView.OnTa
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TagCloudView tagCloudView1 = (TagCloudView) findViewById(R.id.tag_cloud_view_1);
         List<String> tags = new ArrayList<>();
         for (int i = 0; i < 20; i++) {
             tags.add("标签" + i);
         }
+
+        TagCloudView tagCloudView0 = (TagCloudView) findViewById(R.id.tag_cloud_view_0);
+        tagCloudView0.setTags(tags.subList(0, 4));
+        tagCloudView0.setOnTagClickListener(this);
+        tagCloudView0.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(), "TagView onClick",
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        TagCloudView tagCloudView1 = (TagCloudView) findViewById(R.id.tag_cloud_view_1);
         tagCloudView1.setTags(tags);
         tagCloudView1.setOnTagClickListener(this);
         tagCloudView1.setOnClickListener(new View.OnClickListener() {

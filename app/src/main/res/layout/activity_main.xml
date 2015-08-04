@@ -10,6 +10,27 @@
         android:background="#ffffff"
         tools:context=".MainActivity">
 
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:background="#009688"
+            android:textColor="#ffffff"
+            android:text="默认样式、Tag 及整个视图都可点击、少量内容显示"/>
+        <me.next.tagview.TagCloudView
+            android:id="@+id/tag_cloud_view_0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_tagcloudview_black_selector"
+            app:tcvItemBorderHorizontal="8dp"
+            app:tcvItemBorderVertical="6dp"
+            app:tcvBorder="8dp"
+            app:tcvTextColor="#123455"
+            app:tcvSingleLine="true"
+            app:tcvCanTagClick="true"
+            />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

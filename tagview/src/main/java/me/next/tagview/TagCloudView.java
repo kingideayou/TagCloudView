@@ -21,6 +21,7 @@ import java.util.List;
 public class TagCloudView extends ViewGroup{
 
     private static final String TAG = TagCloudView.class.getSimpleName();
+    private static final int TYPE_TEXT_NORMAL = 1;
     private List<String> tags;
 
     private LayoutInflater mInflater;
@@ -214,6 +215,13 @@ public class TagCloudView extends ViewGroup{
         int childHeight;
 
         totalWidth += mViewBorder;
+
+        int textTotalWidth = getTextTotalWidth();
+        if (textTotalWidth < sizeWidth - imageWidth) {
+            endText = null;
+            endTextWidth = 0;
+        }
+
         for (int i = 0; i < getChildCount(); i++) {
             View child = getChildAt(i);
             childWidth = child.getMeasuredWidth();
@@ -227,15 +235,17 @@ public class TagCloudView extends ViewGroup{
                 totalWidth += childWidth + mTagBorderHor;
             }
 
-            if (totalWidth + mTagBorderHor + mViewBorder + mViewBorder + endTextWidth + imageWidth < sizeWidth) {
-                child.layout(
-                        totalWidth - childWidth + mTagBorderVer,
-                        totalHeight - childHeight,
-                        totalWidth + mTagBorderVer,
-                        totalHeight);
-            } else {
-                totalWidth -= childWidth + mViewBorder;
-                break;
+            if (child.getTag() != null && child.getTag() == TYPE_TEXT_NORMAL) {
+                if (totalWidth + mTagBorderHor + mViewBorder + mViewBorder + endTextWidth + imageWidth < sizeWidth) {
+                    child.layout(
+                            totalWidth - childWidth + mTagBorderVer,
+                            totalHeight - childHeight,
+                            totalWidth + mTagBorderVer,
+                            totalHeight);
+                } else {
+                    totalWidth -= childWidth + mViewBorder;
+                    break;
+                }
             }
         }
 
@@ -300,6 +310,20 @@ public class TagCloudView extends ViewGroup{
         return totalHeight + mViewBorder;
     }
 
+    private int getTextTotalWidth() {
+        if (getChildCount() == 0) {
+            return 0;
+        }
+        int totalChildWidth = 0;
+        for (int i = 0; i < getChildCount(); i++) {
+            View child = getChildAt(i);
+            if (child.getTag() != null && (int)child.getTag() == TYPE_TEXT_NORMAL) {
+                totalChildWidth += child.getMeasuredWidth() + mViewBorder;
+            }
+        }
+        return totalChildWidth + mTagBorderHor * 2;
+    }
+
     @Override
     public LayoutParams generateLayoutParams(AttributeSet attrs) {
         return super.generateLayoutParams(attrs);
@@ -318,6 +342,7 @@ public class TagCloudView extends ViewGroup{
                 LayoutParams layoutParams = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
                 tagView.setLayoutParams(layoutParams);
                 tagView.setText(tags.get(i));
+                tagView.setTag(TYPE_TEXT_NORMAL);
                 final int finalI = i;
                 tagView.setOnClickListener(new OnClickListener() {
                     @Override
