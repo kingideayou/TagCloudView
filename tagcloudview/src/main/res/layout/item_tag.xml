@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          android:id="@+id/tag"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:paddingTop="2dp"
+          android:paddingBottom="2dp"
+          android:paddingLeft="8dp"
+          android:paddingRight="8dp"
+          tools:text="哈哈哈"
+          android:textColor="#FFFFFF"
+          android:background="@drawable/tag_background"/>
