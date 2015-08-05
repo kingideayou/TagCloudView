@@ -21,7 +21,7 @@
     
       compile project(':tagview')
       
-只需要在 XML 文件中添加如下视图
+导入成功后，只需要在 XML 文件中添加如下视图
 
       <me.next.tagview.TagCloudView
             android:id="@+id/tag_cloud_view"
@@ -67,8 +67,8 @@
 
 # 效果图
 
-<img src="https://raw.githubusercontent.com/kingideayou/TagCloudView/master/imgs/tagCloudView_1.png" width = "310" height = "580" alt="TagCloudView" align=center />
-<img src="https://raw.githubusercontent.com/kingideayou/TagCloudView/master/imgs/tagCloudView_2.png" width = "310" height = "580" alt="TagCloudView" align=center />
+<img src="https://raw.githubusercontent.com/kingideayou/TagCloudView/master/imgs/tagCloudView_1.png" width = "310" height = "560" alt="TagCloudView" align=center />
+<img src="https://raw.githubusercontent.com/kingideayou/TagCloudView/master/imgs/tagCloudView_2.png" width = "310" height = "560" alt="TagCloudView" align=center />
 
 动图展示:
 
