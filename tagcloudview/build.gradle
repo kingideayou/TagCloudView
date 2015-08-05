@@ -1,10 +1,11 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
+apply plugin: 'maven'
 
 
 // This is the library version used when deploying the artifact
-version = "1.0.0"
+version = "1.0.1"
 group = "com.github.kingideayou"                                        // Maven Group ID for the artifact
 
 def siteUrl = 'https://github.com/kingideayou/TagCloudView'      // Homepage URL of the library
@@ -48,6 +49,8 @@ install {
         // This generates POM.xml with proper parameters
         pom {
             project {
+                group 'com.github.kingideayou'
+                version '1.0.1'
                 packaging 'aar'
                 artifactId 'tag-cloud-view'
 
@@ -66,7 +69,7 @@ install {
                     developer {
                         id 'kingideayou'
                         name 'kingideayou'
-                        email 'kingideayou@qq.com'
+                        email 'kingideayou@foxmail.com'
                     }
                 }
                 scm {
@@ -75,7 +78,7 @@ install {
                     url siteUrl
 
                 }
-            }
+            }.writeTo("build/publications/maven/pom-default.xml")
         }
     }
 }
@@ -85,7 +88,7 @@ ext {
     bintrayRepo = 'maven'
     bintrayName = 'tag-cloud-view'
 
-    publishedGroupId = 'com.inthecheesefactory.thecheeselibrary'
+    publishedGroupId = 'com.github.kingideayou'
     libraryName = 'TagCloudView'
     artifact = 'tag-cloud-view'
 
@@ -96,8 +99,8 @@ ext {
 
     libraryVersion = '1.0.0'
 
-    developerId = 'NeXT'
-    developerName = 'Winboy You'
+    developerId = 'kingideayou'
+    developerName = 'kingideayou'
     developerEmail = 'kingideayou@foxmail.com'
 
     licenseName = 'The Apache Software License, Version 2.0'
