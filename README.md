@@ -6,6 +6,15 @@
 只需要一行代码即可设置 SingleLine 模式：app:tcvSingleLine="true" true 为 SingleLine 模式，false 为默认标签云模式
 
 # How to use 如何使用
+
+##### 第一种方式
+使用 JCenter 在项目的 build.gradle 中添加如下代码
+      
+      //目前已经添加到 JCenter 库，但是好像还不能直接引用，有了解的小伙伴可以提下意见
+      //http://jcenter.bintray.com/com/github/kingideayou/tagcloudview/1.0.0
+      compile 'com.github.kingideayou:tagcloudview:1.0.0'
+      
+##### 第二种方式
 首先下载 tagView，将 tagView 文件夹拷贝到项目的目录下面，然后在setting.gradle文件中增加文件夹名称
 
       include ":tagview"
