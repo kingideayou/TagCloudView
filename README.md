@@ -7,12 +7,12 @@
 
 # How to use 如何使用
 
-#### 第一种方式
+##### Gradle  
 使用 JCenter 在项目的 build.gradle 中添加如下代码
       
       compile 'com.github.kingideayou:tagcloudview:1.0.1'
       
-#### 第二种方式
+#### Import 
 首先下载 tagView，将 tagView 文件夹拷贝到项目的目录下面，然后在setting.gradle文件中增加文件夹名称
 
       include ":tagview"
