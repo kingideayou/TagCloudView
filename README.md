@@ -2,9 +2,9 @@
 支持 SingleLine 模式的标签云效果，轻松实现知乎问题话题列表  
 标签云效果，可以设置为 SingleLine 模式，丰富的自定义样式选择。  
 只需要一行代码即可设置 SingleLine 模式：app:tcvSingleLine="true" true 为 SingleLine 模式，false 为默认标签云模式  
-###Demo apk 下载：  
-[Demo apk](https://github.com/kingideayou/TagCloudView/raw/master/apk/Demo.apk)  
+###Demo apk 下载：
 <img src="https://raw.githubusercontent.com/kingideayou/TagCloudView/master/imgs/TagCloudView.png" width = "120" height = "120" alt="ListView 效果" align=center />  
+[扫码或点我下载](https://github.com/kingideayou/TagCloudView/raw/master/apk/Demo.apk)  
 
 # How to use 如何使用
 
