@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/TagCloud.iml" filepath="$PROJECT_DIR$/TagCloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TagCloudView.iml" filepath="$PROJECT_DIR$/TagCloudView.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/tagcloudview/tagcloudview.iml" filepath="$PROJECT_DIR$/tagcloudview/tagcloudview.iml" />
     </modules>
