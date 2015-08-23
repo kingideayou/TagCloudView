@@ -1,4 +1,6 @@
-# TagCloudView
+# TagCloudView [![TagCloudView](https://img.shields.io/badge/kingideayou-TagCloudView-brightgreen.svg?style=flat)](https://kingideayou.github.io)
+
+
 支持 SingleLine 模式的标签云效果，轻松实现知乎问题话题列表  
 标签云效果，可以设置为 SingleLine 模式，丰富的自定义样式选择。  
 只需要一行代码即可设置 SingleLine 模式：app:tcvSingleLine="true" true 为 SingleLine 模式，false 为默认标签云模式  
