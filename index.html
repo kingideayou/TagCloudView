@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Tagcloudview by kingideayou</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Tagcloudview</h1>
+        <h2>支持 SingleLine 模式的标签云效果</h2>
+        <a href="https://github.com/kingideayou/TagCloudView" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="tagcloudview-" class="anchor" href="#tagcloudview-" aria-hidden="true"><span class="octicon octicon-link"></span></a>TagCloudView <a href="https://kingideayou.github.io"><img src="https://img.shields.io/badge/kingideayou-TagCloudView-brightgreen.svg?style=flat" alt="TagCloudView"></a>
+</h1>
+
+<p>支持 SingleLine 模式的标签云效果，轻松实现知乎问题话题列表<br>
+标签云效果，可以设置为 SingleLine 模式，丰富的自定义样式选择。<br>
+只需要一行代码即可设置 SingleLine 模式：app:tcvSingleLine="true" true 为 SingleLine 模式，false 为默认标签云模式  </p>
+
+<h3>
+<a id="demo-apk-下载" class="anchor" href="#demo-apk-%E4%B8%8B%E8%BD%BD" aria-hidden="true"><span class="octicon octicon-link"></span></a>Demo apk 下载：</h3>
+
+<p><img src="https://raw.githubusercontent.com/kingideayou/TagCloudView/master/imgs/TagCloudView.png" width="120" height="120" alt="ListView 效果" align="center"><br>
+<a href="https://github.com/kingideayou/TagCloudView/raw/master/apk/Demo.apk">扫码或点我下载</a>  </p>
+
+<h1>
+<a id="how-to-use-如何使用" class="anchor" href="#how-to-use-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to use 如何使用</h1>
+
+<h5>
+<a id="gradle" class="anchor" href="#gradle" aria-hidden="true"><span class="octicon octicon-link"></span></a>Gradle</h5>
+
+<p>使用 JCenter 在项目的 build.gradle 中添加如下代码</p>
+
+<pre><code>  compile 'com.github.kingideayou:tagcloudview:1.0.1'
+</code></pre>
+
+<h4>
+<a id="import" class="anchor" href="#import" aria-hidden="true"><span class="octicon octicon-link"></span></a>Import</h4>
+
+<p>首先下载 tagView，将 tagView 文件夹拷贝到项目的目录下面，然后在setting.gradle文件中增加文件夹名称</p>
+
+<pre><code>  include ":tagview"
+</code></pre>
+
+<p>然后在我们需要依赖这个模块的module中的build.gradle文件中加入如下代码:</p>
+
+<pre><code>  compile project(':tagview')
+</code></pre>
+
+<p>导入成功后，只需要在 XML 文件中添加如下视图</p>
+
+<pre><code>  &lt;me.next.tagview.TagCloudView
+        android:id="@+id/tag_cloud_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_tagcloudview_black_selector"
+        app:tcvItemBorderHorizontal="8dp"
+        app:tcvItemBorderVertical="6dp"
+        app:tcvBorder="8dp"
+        app:tcvTextColor="#123455"
+        app:tcvSingleLine="true"
+        app:tcvCanTagClick="true"
+        /&gt;
+</code></pre>
+
+<p>在 Activity 中调用如下方法即可</p>
+
+<pre><code>  List&lt;String&gt; tags = new ArrayList&lt;&gt;();
+    for (int i = 0; i &lt; 20; i++) {
+        tags.add("标签" + i);
+    }
+
+  TagCloudView tagCloudView1 = (TagCloudView) findViewById(R.id.tag_cloud_view_1);
+  tagCloudView1.setTags(tags);
+  tagCloudView1.setOnTagClickListener(this);
+  tagCloudView1.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Toast.makeText(getApplicationContext(), "TagView onClick",
+                    Toast.LENGTH_SHORT).show();
+        }
+    });
+
+   @Override
+  public void onTagClick(int position) {
+    if (position == -1) {
+        Toast.makeText(getApplicationContext(), "点击末尾文字",
+                Toast.LENGTH_SHORT).show();
+    } else {
+        Toast.makeText(getApplicationContext(), "点击 position : " + position,
+                Toast.LENGTH_SHORT).show();
+    }
+  }
+</code></pre>
+
+<h1>
+<a id="效果图" class="anchor" href="#%E6%95%88%E6%9E%9C%E5%9B%BE" aria-hidden="true"><span class="octicon octicon-link"></span></a>效果图</h1>
+
+<p><img src="https://raw.githubusercontent.com/kingideayou/TagCloudView/master/imgs/tagCloudView_1.png" width="310" height="560" alt="TagCloudView" align="center">
+<img src="https://raw.githubusercontent.com/kingideayou/TagCloudView/master/imgs/tagCloudView_2.png" width="310" height="560" alt="TagCloudView" align="center"></p>
+
+<h3>
+<a id="动图展示" class="anchor" href="#%E5%8A%A8%E5%9B%BE%E5%B1%95%E7%A4%BA" aria-hidden="true"><span class="octicon octicon-link"></span></a>动图展示:</h3>
+
+<p><img src="https://raw.githubusercontent.com/kingideayou/TagCloudView/master/imgs/tagCloudView_3.gif" width="380" height="620" alt="TagCloudView" align="center">  </p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<pre><code>Copyright 2015 NeXT
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+</code></pre>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/kingideayou/TagCloudView/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/kingideayou/TagCloudView/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/kingideayou/TagCloudView"></a> is maintained by <a href="https://github.com/kingideayou">kingideayou</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
