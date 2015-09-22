@@ -5,7 +5,7 @@ apply plugin: 'maven'
 
 
 // This is the library version used when deploying the artifact
-version = "1.0.1"
+version = "1.0.2"
 group = "com.github.kingideayou"                                        // Maven Group ID for the artifact
 
 def siteUrl = 'https://github.com/kingideayou/TagCloudView'      // Homepage URL of the library
@@ -50,7 +50,7 @@ install {
         pom {
             project {
                 group 'com.github.kingideayou'
-                version '1.0.1'
+                version '1.0.2'
                 packaging 'aar'
                 artifactId 'tag-cloud-view'
 

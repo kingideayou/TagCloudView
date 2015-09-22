@@ -331,6 +331,7 @@ public class TagCloudView extends ViewGroup{
 
     public void setTags(List<String> tagList) {
         this.tags = tagList;
+        this.removeAllViews();
         if (tags != null && tags.size() > 0) {
             for (int i = 0; i < tags.size(); i++) {
                 TextView tagView = (TextView) mInflater.inflate(mTagResId, null);
