@@ -8,6 +8,9 @@
 <img src="https://raw.githubusercontent.com/kingideayou/TagCloudView/master/imgs/TagCloudView.png" width = "120" height = "120" alt="ListView 效果" align=center />  
 [扫码或点我下载](https://github.com/kingideayou/TagCloudView/raw/master/apk/Demo.apk)  
 
+# Update 更新
+* fix [#4](https://github.com/kingideayou/TagCloudView/issues/3) 添加切换单行多行方法 TagCloudView.singleLine(true)
+
 # How to use 如何使用
 
 ##### Gradle  
