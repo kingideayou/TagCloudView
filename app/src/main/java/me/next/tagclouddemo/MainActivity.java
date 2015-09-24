@@ -34,16 +34,30 @@ public class MainActivity extends AppCompatActivity implements TagCloudView.OnTa
             }
         });
 
-        TagCloudView tagCloudView1 = (TagCloudView) findViewById(R.id.tag_cloud_view_1);
+        final TagCloudView tagCloudView1 = (TagCloudView) findViewById(R.id.tag_cloud_view_1);
         tagCloudView1.setTags(tags);
-        tagCloudView1.setOnTagClickListener(this);
+        tagCloudView1.setOnTagClickListener(new TagCloudView.OnTagClickListener() {
+            @Override
+            public void onTagClick(int position) {
+                if (position == -1) {
+                    tagCloudView1.singleLine(false);
+                    Toast.makeText(getApplicationContext(), "点击展开标签",
+                            Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(getApplicationContext(), "点击 position : " + position,
+                            Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
         tagCloudView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "TagView onClick",
+                tagCloudView1.singleLine(true);
+                Toast.makeText(getApplicationContext(), "点击关闭标签",
                         Toast.LENGTH_SHORT).show();
             }
         });
+
 
         TagCloudView tagCloudView2 = (TagCloudView) findViewById(R.id.tag_cloud_view_2);
         tagCloudView2.setTags(tags);

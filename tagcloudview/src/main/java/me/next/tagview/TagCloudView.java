@@ -359,6 +359,12 @@ public class TagCloudView extends ViewGroup{
         postInvalidate();
     }
 
+    public void singleLine(boolean mSingleLine) {
+        this.mSingleLine = mSingleLine;
+        this.setTags(tags);
+//        requestLayout();
+    }
+
     public void setOnTagClickListener(OnTagClickListener onTagClickListener) {
         this.onTagClickListener = onTagClickListener;
     }
