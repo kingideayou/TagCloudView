@@ -27,6 +27,7 @@
             app:tcvItemBorderVertical="6dp"
             app:tcvBorder="8dp"
             app:tcvTextColor="#123455"
+            app:tcvTextSize="12"
             app:tcvSingleLine="true"
             app:tcvCanTagClick="true"
             />

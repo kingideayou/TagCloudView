@@ -36,7 +36,7 @@ bintray {
     configurations = ['archives']
     pkg {
         repo = "maven"
-        name = "tag-cloud-view"
+        name = "tag-cloud-view" //bintray 名字
         websiteUrl = siteUrl
         vcsUrl = gitUrl
         licenses = ["Apache-2.0"]

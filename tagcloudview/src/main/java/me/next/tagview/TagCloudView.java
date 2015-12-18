@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -88,7 +89,7 @@ public class TagCloudView extends ViewGroup{
                 defStyleAttr
         );
 
-        mTagSize = a.getDimension(R.styleable.TagCloudView_tcvTextSize, DEFAULT_TEXT_SIZE);
+        mTagSize = a.getInteger(R.styleable.TagCloudView_tcvTextSize, DEFAULT_TEXT_SIZE);
         mTagColor = a.getColor(R.styleable.TagCloudView_tcvTextColor, DEFAULT_TEXT_COLOR);
         mBackground = a.getResourceId(R.styleable.TagCloudView_tcvBackground, DEFAULT_TEXT_BACKGROUND);
         mViewBorder = a.getDimensionPixelSize(R.styleable.TagCloudView_tcvBorder, DEFAULT_VIEW_BORDER);
